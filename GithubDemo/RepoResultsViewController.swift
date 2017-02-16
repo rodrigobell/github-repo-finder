@@ -70,21 +70,22 @@ class RepoResultsViewController: UIViewController, UITableViewDelegate, UITableV
             
             // Print the returned repositories to the output window
             for repo in newRepos {
-//                print(repo)
+                print(repo)
             }
             
-//            print(self.repos)
             
-            
-
             MBProgressHUD.hide(for: self.view, animated: true)
+            self.tableView.reloadData()
+            
             }, error: { (error) -> Void in
                 print(error)
         })
         
-        
+        
+      
     }
-}
+    }
+    
 
 // SearchBar methods
 extension RepoResultsViewController: UISearchBarDelegate {
