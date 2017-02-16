@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,16 +22,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="114" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xuy-9M-LJy" userLabel="Table View">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="114" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xuy-9M-LJy" userLabel="Table View">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="repo-cell" rowHeight="114" id="Phb-Zu-CzQ" customClass="RepoCell" customModule="GithubDemo" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="114"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Phb-Zu-CzQ" id="8Gk-Nb-LkO">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="113"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="113.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="CodePath" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lA6-S6-6Ko">
@@ -65,7 +65,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mri-wL-2Ee">
-                                                    <rect key="frame" x="72" y="48" width="61" height="13.5"/>
+                                                    <rect key="frame" x="72" y="48" width="283" height="13.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -78,6 +78,7 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="V0B-Fi-3Y3" firstAttribute="centerY" secondItem="oli-BW-IFH" secondAttribute="centerY" id="0IG-fQ-akm"/>
                                                 <constraint firstItem="kjG-G8-z6t" firstAttribute="top" secondItem="lA6-S6-6Ko" secondAttribute="bottom" id="0vv-ca-RUw"/>
                                                 <constraint firstItem="oli-BW-IFH" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="lA6-S6-6Ko" secondAttribute="trailing" constant="12" id="17J-XL-BNh"/>
                                                 <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="y0z-Ry-32R" secondAttribute="bottom" constant="8" id="2Sd-dP-VzY"/>
@@ -89,6 +90,7 @@
                                                 <constraint firstItem="y0z-Ry-32R" firstAttribute="leading" secondItem="8Gk-Nb-LkO" secondAttribute="leading" constant="8" id="aVH-ap-RoF"/>
                                                 <constraint firstItem="lA6-S6-6Ko" firstAttribute="leading" secondItem="8Gk-Nb-LkO" secondAttribute="leading" constant="8" id="fMj-Mb-R1s"/>
                                                 <constraint firstItem="mri-wL-2Ee" firstAttribute="top" secondItem="y0z-Ry-32R" secondAttribute="top" id="gL5-sQ-Oxy"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="mri-wL-2Ee" secondAttribute="trailing" constant="12" id="jED-AA-LI8"/>
                                                 <constraint firstItem="8Qm-06-msb" firstAttribute="leading" secondItem="8Gk-Nb-LkO" secondAttribute="leading" constant="8" id="lSY-qB-SqJ"/>
                                                 <constraint firstItem="8Qm-06-msb" firstAttribute="top" secondItem="lA6-S6-6Ko" secondAttribute="bottom" id="s18-Ub-VZE"/>
                                                 <constraint firstItem="oli-BW-IFH" firstAttribute="top" secondItem="8Gk-Nb-LkO" secondAttribute="top" constant="8" id="veH-GF-T1B"/>
@@ -110,6 +112,12 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="xuy-9M-LJy" secondAttribute="bottom" id="Dho-lu-eXk"/>
+                            <constraint firstItem="xuy-9M-LJy" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="LxI-Jz-rpo"/>
+                            <constraint firstAttribute="trailing" secondItem="xuy-9M-LJy" secondAttribute="trailing" id="ndN-cH-hqZ"/>
+                            <constraint firstItem="xuy-9M-LJy" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="zUP-yN-4Q3"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="x5q-EH-pP8"/>
                     <connections>
