@@ -119,7 +119,13 @@
                             <constraint firstItem="xuy-9M-LJy" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="zUP-yN-4Q3"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="x5q-EH-pP8"/>
+                    <navigationItem key="navigationItem" id="x5q-EH-pP8">
+                        <barButtonItem key="rightBarButtonItem" title="Settings" id="nZc-YR-B3e">
+                            <connections>
+                                <segue destination="YSG-zI-7si" kind="presentation" id="FjG-9R-RGl"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="xuy-9M-LJy" id="qfW-6W-iK9"/>
                     </connections>
@@ -127,6 +133,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="818.39999999999998" y="-558.17091454272872"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="vcn-qR-aK8">
+            <objects>
+                <viewController id="4Vv-sV-vsd" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pTw-FL-KKa"/>
+                        <viewControllerLayoutGuide type="bottom" id="3I6-TE-epP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9I2-4r-Vg8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Euw-BJ-PT0"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Oes-2R-2Os" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2207" y="-558"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="FpP-oR-azb">
@@ -145,6 +170,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dru-y2-L7C" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="132" y="-557"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="S0b-a1-R8V">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="YSG-zI-7si" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="J63-aI-ETV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="4Vv-sV-vsd" kind="relationship" relationship="rootViewController" id="KG1-BL-3rk"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ge5-Qx-2A6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1519" y="-557"/>
         </scene>
     </scenes>
 </document>
