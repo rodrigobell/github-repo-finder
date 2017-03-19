@@ -134,10 +134,10 @@
             </objects>
             <point key="canvasLocation" x="818.39999999999998" y="-558.17091454272872"/>
         </scene>
-        <!--View Controller-->
+        <!--Search Settings View Controller-->
         <scene sceneID="vcn-qR-aK8">
             <objects>
-                <viewController id="4Vv-sV-vsd" sceneMemberID="viewController">
+                <viewController id="4Vv-sV-vsd" customClass="SearchSettingsViewController" customModule="GithubDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="pTw-FL-KKa"/>
                         <viewControllerLayoutGuide type="bottom" id="3I6-TE-epP"/>
@@ -145,13 +145,35 @@
                     <view key="view" contentMode="scaleToFill" id="9I2-4r-Vg8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Xw1-cD-Vwr">
+                                <rect key="frame" x="14" y="123" width="347" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Min stars" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nlP-o7-2HE">
+                                <rect key="frame" x="16" y="94" width="70" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Euw-BJ-PT0"/>
+                    <navigationItem key="navigationItem" id="Euw-BJ-PT0">
+                        <barButtonItem key="rightBarButtonItem" title="Exit" id="GCo-hF-O87">
+                            <connections>
+                                <action selector="exitTapped:" destination="4Vv-sV-vsd" id="ZtB-BZ-5Ix"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="starsSlider" destination="Xw1-cD-Vwr" id="QBe-82-i4J"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oes-2R-2Os" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2207" y="-558"/>
+            <point key="canvasLocation" x="2205.5999999999999" y="-558.17091454272872"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="FpP-oR-azb">

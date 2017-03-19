@@ -80,10 +80,8 @@ class RepoResultsViewController: UIViewController, UITableViewDelegate, UITableV
             }, error: { (error) -> Void in
                 print(error)
         })
-        
-        
-      
     }
+    
     }
     
 
